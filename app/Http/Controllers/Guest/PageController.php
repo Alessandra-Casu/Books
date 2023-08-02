@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Guest;
 
-use App\Http\Controllers\Controller;
+use App\Models\Book;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
@@ -16,6 +17,16 @@ class PageController extends Controller
     }
 
     public function books() {
-        return view('books');
+        //chiedere i dati al database
+
+        //il Controller chiama il Model
+        $collBooks = Book::all();//SELECT * FROM books
+
+        //il Controller chiama la View passando dei dati
+        return view('books', compact('collBooks'));
+
+        // return view('books', [
+        //     'collBooks' => $books,
+        // ]);
     }
 }
