@@ -3,5 +3,5 @@
 
 
 @section('contents')
-    <h2>Benvenuti nella nostra libreria</h2>
+    <h2>Questi sono i nostri libri</h2>
 @endsection
