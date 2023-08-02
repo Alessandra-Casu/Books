@@ -22,9 +22,13 @@ class PageController extends Controller
         //il Controller chiama il Model
         $collBooks = Book::all();//SELECT * FROM books
 
+        // $collBooks = Book::where('title', 'I promessi sposi')->get();  //SELECT * FROM books WHERE 'title' = 'I promessi sposi'
+
+        $collBooks = Book::where('title', 'LIKE', '%sposi%')->get(); //SELECT * FROM books WHERE '%sposi%'
+
+
         //il Controller chiama la View passando dei dati
         return view('books', compact('collBooks'));
-
         // return view('books', [
         //     'collBooks' => $books,
         // ]);
