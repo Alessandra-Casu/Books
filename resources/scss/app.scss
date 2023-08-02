@@ -2,7 +2,19 @@
 // body {
 // background-image: url("../img/jumbotron.png");
 // }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 h1 {
     color: red;
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
 }

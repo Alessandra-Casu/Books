@@ -22,6 +22,6 @@ Route::get('/',      [PageController::class, 'index'])->name('home');
 
 Route::get('/about', [PageController::class, 'about'])->name('about');
 
-Route::get('/books', function() {return view('books');})->name('books');
+Route::get('/books', [PageController::class, 'books'])->name('books');
 
 
